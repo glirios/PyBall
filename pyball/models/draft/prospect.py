@@ -10,19 +10,19 @@ from pyball.models.generic_team import Team
 @dataclass
 class Prospect:
     bisPlayerId: int = None
+    home: Union[Home, Dict[str, Any]] = field(default_factory=dict)
+    scoutingReport: str = None
+    school: Union[School, Dict[str, Any]] = field(default_factory=dict)
+    blurb: str = None
+    headshotLink: str = None
+    person: Union[Person, Dict[str, Any]] = field(default_factory=dict)
     draftPlayerId: int = None
     pickRound: float = None
     pickNumber: float = None
     rank: float = None
     pickedTeamCode: str = None
-    home: Union[Home, Dict[str, Any]] = field(default_factory=dict)
-    scoutingReport: str = None
-    school: Union[School, Dict[str, Any]] = field(default_factory=dict)
     comments: str = None
-    person: Union[Person, Dict[str, Any]] = field(default_factory=dict)
     photoFlag: bool = None
-    blurb: str = None
-    headshotLink: str = None
     isDrafted: bool = None
     currentAge: int = None
     team: Union[Team, Dict[str, Any]] = field(default_factory=dict)

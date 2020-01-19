@@ -8,3 +8,5 @@ class Sport:
     link: str = None
     name: str = None
     abbreviation: str = None
+    sortOrder: str = None
+    activeStatus: bool = None

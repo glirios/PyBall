@@ -18,15 +18,23 @@ class Person:
     currentAge: int = None
     birthCity: str = None
     birthStateProvince: str = None
+    birthCountry: str = None
     height: str = None
     weight: int = None
     active: bool = None
+    primaryPosition: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
     useName: str = None
     middleName: str = None
     boxscoreName: str = None
     nickName: str = None
+    gender: str = None
+    isPlayer: bool = None
+    isVerified: bool = None
     draftYear: int = None
+    pronunciation: str = None
     mlbDebutDate: str = None
+    batSide: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
+    pitchHand: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
     nameFirstLast: str = None
     nameSlug: str = None
     firstLastName: str = None
@@ -35,14 +43,14 @@ class Person:
     initLastName: str = None
     fullFMLName: str = None
     fullLFMName: str = None
-    pitchHand: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
-    primaryPosition: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
-    batSide: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
-    birthCountry: str = None
-    pronunciation: str = None
     strikeZoneTop: float = None
     strikeZoneBottom: float = None
     nameTitle: str = None
+    nameMatrilineal: str = None
+    deathDate: str = None
+    deathCity: str = None
+    deathCountry: str = None
+
 
     def __post_init__(self):
         self.pitchHand = PitchHand(**self.pitchHand)
