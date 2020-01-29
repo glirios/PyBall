@@ -7,7 +7,7 @@ from pyball.models.position.position import OnDeck
 from pyball.models.position.position import Pitcher
 from pyball.models.generic_team import Team
 
-
+# needs to be tested
 @dataclass
 class Offense:
     batter: Union[Batter, Dict[str, Any]] = field(default_factory=dict)

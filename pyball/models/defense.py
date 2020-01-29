@@ -13,7 +13,7 @@ from pyball.models.position.position import Catcher
 
 from pyball.models.generic_team import Team
 
-
+# Defense class needs to be tested
 @dataclass
 class Defense:
     pitcher: Union[Pitcher, Dict[str, Any]] = field(default_factory=dict)

@@ -3,7 +3,7 @@ from typing import Union, Dict, Any
 
 from pyball.models.inning import Inning
 
-
+# needs to be tested
 @dataclass
 class Innings:
     inning: Union[Inning, Dict[str, Any]] = field(default_factory=dict)

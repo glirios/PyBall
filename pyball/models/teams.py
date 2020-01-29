@@ -3,7 +3,7 @@ from typing import Union, Dict, Any
 
 from pyball.models.line_score import LineScore
 
-
+# needs to be tested
 @dataclass
 class Teams:
     home: Union[LineScore, Dict[str, Any]] = field(default_factory=dict)

@@ -6,7 +6,7 @@ from pyball.models.defense import Defense
 from pyball.models.offense import Offense
 from pyball.models.innings import Innings
 
-
+# generic games needs to be tested
 @dataclass
 class Game:
     currentInning: int = None
