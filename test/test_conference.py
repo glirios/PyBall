@@ -1,6 +1,8 @@
 import pytest
 from pyball import PyBall
 from pyball.models.conference import Conference
+from pyball.models.conference import Sport
+from pyball.models.conference import League
 
 from pyball.exceptions import BadRequestError
 
@@ -20,6 +22,9 @@ def test_conferences():
 def test_get_conference_returns_list_of_conferences(test_conferences):
     assert isinstance(test_conferences, list)
     assert isinstance(test_conferences[0], Conference)
+    assert isinstance(test_conferences[0].sport, Sport)
+    assert isinstance(test_conferences[0].league, League)
+
 
 
 def test_get_conference_returns_conference(test_conference):
